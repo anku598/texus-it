@@ -342,6 +342,10 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2.5rem;
+    @include mediaXs {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
   }
 
   .swiper {
@@ -637,6 +641,11 @@ nav {
     background: #ffffff;
     margin-bottom: 1.7rem;
     align-items: center;
+    @include mediaSm {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -644,7 +653,7 @@ nav {
       text-align: center;
       .date-name {
         color: #2e3192;
-        @include font-size(18px, 30px, 400px, 1440px);
+        @include font-size(26px, 30px, 400px, 1440px);
         font-weight: 600;
       }
       .name {
@@ -711,6 +720,10 @@ footer {
   background: #f8f9fe;
   padding: 4.5rem 0;
   padding-bottom: 2rem;
+
+  @include mediaSm {
+    padding: 2rem 0;
+  }
   p {
     margin: 0;
   }
@@ -718,6 +731,9 @@ footer {
   .footer-logo {
     max-width: 160px;
     width: 100%;
+    @include mediaSm {
+      max-width: 120px;
+    }
     img {
       max-width: 100%;
       width: 100%;
