@@ -1,6 +1,44 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 import "./styles/style.scss";
 
+// navbar interaction
+
+document.addEventListener("DOMContentLoaded", function () {
+  const topHeader = document.querySelector(".top-header");
+  const navbar = document.querySelector(".navbar");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+  const logo = document.querySelector(".navbar .navbar-brand img");
+  const body = document.body;
+  let lastScrollTop = 0;
+
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY;
+
+    if (scrollTop > 100) {
+      topHeader.style.display = "none";
+      navbar.classList.add("navbar-fixed", "navbar-small");
+      navbarCollapse.style.top = "56px";
+    } else {
+      topHeader.style.display = "flex";
+      navbar.classList.remove("navbar-fixed", "navbar-small");
+      navbarCollapse.style.top = "106px";
+    }
+
+    lastScrollTop = scrollTop;
+  });
+
+  // Toggler functionality for mobile
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  navbarToggler.addEventListener("click", function () {
+    body.classList.toggle("nav-open");
+    navbarToggler
+      .querySelector(".navbar-toggler-icon")
+      .classList.toggle("open");
+  });
+});
+
+// Slider Script is here
+
 let swiperNews = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 20,

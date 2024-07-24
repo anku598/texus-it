@@ -21,14 +21,14 @@
       <header>
         <div class="top-header container-gap">
           <div class="left-col">
-            <div class="left-item">
+            <a href="tel:+370 386 52992" class="left-item">
               <img src="/icons/call-icon.svg" alt="Call Icon" />
-              <a href="#">+370 386 52992</a>
-            </div>
-            <div class="left-item">
+              <p>+370 386 52992</p>
+            </a>
+            <a href="mailto:info@irkc.lt" class="left-item">
               <img src="/icons/envelope-icon.svg" alt="Envalope Icon" />
-              <a href="#">info@irkc.lt</a>
-            </div>
+              <p>info@irkc.lt</p>
+            </a>
           </div>
           <div class="right-col">
             <a href="#">
@@ -77,7 +77,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">Projektai</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown has-children">
                   <a
                     class="nav-link"
                     href="#"
@@ -86,6 +86,7 @@
                     aria-expanded="false"
                   >
                     Paslaugos
+                    <span class="toggle-icon">+</span>
                   </a>
                   <ul class="dropdown-menu">
                     <li>
@@ -140,7 +141,7 @@
                   <a class="nav-link" href="#">Savanorystė </a>
                 </li>
 
-                <a href="#" class="btn theme-btn">Kontaktai</a>
+                <a href="#" class="btn theme-btn is-mobile">Kontaktai</a>
               </ul>
             </div>
           </div>
@@ -469,7 +470,11 @@
         </div>
 
         <div class="cta-banner-img">
-          <img src="/images/cta-banner-img.jpg" alt="" />
+          <img
+            src="/images/cta-banner-img.jpg"
+            class="cta-full-banner-img"
+            alt=""
+          />
 
           <div class="overlay-social-action">
             <div class="social-action row">
