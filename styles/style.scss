@@ -630,8 +630,10 @@ nav {
     img {
       width: 100%;
       &.cta-full-banner-img {
-        height: 40vh;
-        object-fit: cover;
+        @include mediaSm {
+          height: 40vh;
+          object-fit: cover;
+        }
       }
     }
 
